@@ -7,7 +7,7 @@ resource "aws_instance" "app" {
   user_data     = var.user_data
   tags = {
     #Name = "server-${count.index}"
-    Name = "server-02"
+    Name = "server-03"
   }
 }
 
