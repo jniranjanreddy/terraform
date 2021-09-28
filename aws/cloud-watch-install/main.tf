@@ -2,7 +2,7 @@
 resource "aws_instance" "app" {
   #count = 2
   instance_type = var.instance
-  key_name      = "kube-demo"
+  key_name      = "mumbai"
   ami           = var.image
   user_data     = var.user_data
   tags = {
