@@ -1,7 +1,8 @@
 variable "image" {
   description = "The name of the image being created outside module"
   #default = "ami-00399ec92321828f5"
-  default = "ami-00dfe2c7ce89a450b"
+  #default = "ami-00dfe2c7ce89a450b" # Ohio Region
+  default = "ami-0a23ccb2cdd9286bb" # Munbai Region
   type    = string
 }
 
