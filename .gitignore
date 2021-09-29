@@ -1,4 +1,4 @@
-aws/cloud-watch-install/.terraform/
-aws/elb/.terraform/
-/aws/elb/terraform.tfstate
+#aws/cloud-watch-install/.terraform/
+#aws/elb/.terraform/
+#/aws/elb/terraform.tfstate
 **/**/.terraform/
