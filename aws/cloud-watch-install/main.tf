@@ -1,5 +1,5 @@
 resource "aws_instance" "app" {
-  #count = 2
+  ####count = 2
   instance_type = var.instance
   key_name      = "mumbai"
   ami           = var.image
