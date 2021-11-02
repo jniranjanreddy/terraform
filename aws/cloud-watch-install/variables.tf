@@ -15,7 +15,8 @@ variable "user_data" {
   default     = <<EOF
                 #! /bin/bash
                            sudo amazon-linux-extras install nginx1 -y
-                           sudo echo "<h1>Deployed via Terraform</h1>" | sudo tee /usr/share/nginx/html/index.html
+                           #sudo echo "<h1>Deployed via Terraform</h1>" | sudo tee /usr/share/nginx/html/index.html
+                           sudo echo "<h1>Hello World from $(hostname -f)</h1>" | sudo tee /usr/share/nginx/html/index.html
                            sudo uname -a > /hostname.txt
                            sudo systemctl restart nginx
                            # sudo apt-get update
