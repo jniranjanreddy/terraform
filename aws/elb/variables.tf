@@ -1,7 +1,7 @@
 variable "image" {
   description = "The name of the network being created outside module "
-  default = "ami-0747bdcabd34c712a"
-#  default = "ami-03c977bb7493e8f71"
+  #default = "ami-0a23ccb2cdd9286bb" # Mumbai Region Amazon
+  default = "ami-04bde106886a53080" # Mumbai Region Ubuntu
   type = string
 }
 

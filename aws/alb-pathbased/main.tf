@@ -1,5 +1,5 @@
 resource "aws_instance" "app" {
-  count = 3
+  count = 2
   instance_type = var.instance
   key_name      = "mumbai"
   ami           = var.image
@@ -15,6 +15,5 @@ data "aws_ec2_instance_type_offerings" "t2" {
   filter {
     name   = "instance-type"
     values = ["t2.*"]
-
   }
 }

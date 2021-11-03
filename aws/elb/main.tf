@@ -1,8 +1,8 @@
 resource "aws_instance" "Node01" {
- #count = 2
+ count = 2
  instance_type = "t2.micro"
  key_name   = "kube-demo"
- availability_zone = "us-east-2a"
+ availability_zone = "ap-south-1a"
  ami = "ami-0ba62214afa52bec7"
 
  user_data = <<-EOF
