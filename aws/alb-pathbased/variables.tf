@@ -15,7 +15,7 @@ variable "user_data" {
   description = "The name of the network being created outside module "
   default     = <<EOF
       #! /bin/bash
-                sudo echo "I ran bootstrap script" > /etc/motd
+                sudo echo "I ran bootstrap script" > /bootstrap
                 sudo yum install -y httpd
                 sudo systemctl start httpd
                 sudo systemctl enable httpd
