@@ -1,4 +1,12 @@
-Important Commands:-
+## Important Commands:-
+
+## Format and Validate Terraform code
+``
+terraform fmt #format code per HCL canonical standard
+terraform validate #validate code for syntax
+terraform validate -backend=false #validate code skip backend validation
+
+
 ```
 terraform init
 
@@ -30,6 +38,12 @@ terraform apply -var-file="myproject.tfvars"
 
 export TF_VAR_region=us-esat01
 ```
+
+
+
+
+
+
 =============
 ```
 Terraformming 
@@ -145,7 +159,5 @@ export AWS_REGION=<mention the region>
 /usr/local/bin/terraforming rt --tfstate > rt.tfstate
 
 
-Thanks
-Anand Vamsi.
 
 ```
