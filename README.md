@@ -60,14 +60,13 @@ terraform get -update=true #download and update modules in the “root” module
 echo 'join(",",["foo","bar"])' | terraform console #echo an expression into terraform console and see its expected result as output
 echo '1 + 5' | terraform console #Terraform console also has an interactive CLI just enter “terraform console”
 echo "aws_instance.my_ec2.public_ip" | terraform console #display the Public IP against the “my_ec2” Terraform resource as seen in the Terraform state file
-Terraform Graph(Dependency Graphing)
-
-terraform graph | dot -Tpng > graph.png #produce a PNG diagrams showing relationship and dependencies between Terraform resource in your configuration/code
+```
+## Terraform Graph(Dependency Graphing)
+```terraform graph | dot -Tpng > graph.png #produce a PNG diagrams showing relationship and dependencies between Terraform resource in your configuration/code
 Terraform Taint/Untaint(mark/unmark resource for recreation -> delete and then recreate)
-
 terraform taint aws_instance.my_ec2 #taints resource to be recreated on next apply
 terraform untaint aws_instance.my_ec2 #Remove taint from a resource
-terraform force-unlock LOCK_ID #forcefully unlock a locked state file, LOCK_ID provided when locking the State file beforehand
+terraform force-unlock LOCK_ID #forcefully unlock a locked state file, LOCK_ID provided when locking the State file beforehand```
 Terraform Cloud
 
 terraform login #obtain and save API token for Terraform cloud
