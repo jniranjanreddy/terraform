@@ -1,7 +1,7 @@
 resource "aws_instance" "app" {
   count = 1           
   instance_type = var.instance
-  key_name      = "mumbai"
+  key_name      = "seneca"
   ami           = var.image
   user_data     = var.user_data
   tags = {

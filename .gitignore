@@ -3,3 +3,5 @@
 #/aws/elb/terraform.tfstate
 **/**/.terraform/
 **/**/*.tfvars/
+**/**/**/*.tfvars/
+**/**/**/**/*.tfvars/
