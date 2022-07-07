@@ -12,5 +12,6 @@ variable "AMIS" {
     default = {
       "ap-south-1" = "ami-ubuntu"
       "eu-west-1"  = "ami-CentOS"
+    # in Terraform Console - "${lookup(var.AMIS, var.AWS_REGION, "")}"
     }
 }
