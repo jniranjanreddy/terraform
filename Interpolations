@@ -1,0 +1,17 @@
+
+## Interpolations
+  1. output - 
+  2. count - ${count.index}
+  3. path - path.cwd, path.module, path.root
+  4. math -
+  
+  
+  
+## Conditionals
+  1. if-else:- condition ? Truevalue : Falsevalue 
+  
+          resource "aws_instance" "example" {
+             count = "${var.env == "prod" ? 2 : 1)"
+              }
+  
+  
