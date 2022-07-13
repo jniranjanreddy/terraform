@@ -1,1 +1,1 @@
-AWS_REGION="ap-south-1"
+AWS_REGION="us-east-1"
