@@ -1,14 +1,30 @@
-variable "image" {
-  description = "The name of the image being created outside module"
-  #default = "ami-0a23ccb2cdd9286bb" # Mumbai Region Amazon
-  default = "ami-04bde106886a53080" # Mumbai Region Ubuntu
-  type    = string
-}
 variable "instance" {
   description = "The name of the network being created outside module "
   default     = "t2.micro"
   #type = string
 }
+variable "AWS_REGION" {
+  #default = "ap-south-1"
+  default = "us-east-1"
+}
+
+variable "AMIS" {
+  type = map(string)
+  default = {
+    ap-south-1 = "ami-04bde106886a53080"
+    us-east-1 = "ami-13be557e"
+    
+  }
+}
+variable "KEYS" {
+  type = map(string)
+  default = {
+    ap-south-1 = "ap-south-1-keypair"
+    us-east-1 = "us-east-1-keypair"
+    
+  }
+}
+
 variable "user_data" {
   description = "The name of the network being created outside module "
   default     = <<EOF

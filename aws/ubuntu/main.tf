@@ -1,12 +1,10 @@
 resource "aws_instance" "app" {
-  #count = 2
   instance_type = var.instance
-  key_name      = "mumbai"
-  ami           = var.image
+  key_name      = var.KEYS[var.AWS_REGION]
+  ami           = var.AMIS[var.AWS_REGION]
   user_data     = var.user_data
   tags = {
-    #Name = "server-${count.index}"
-    Name = "k8s-master"
+    Name = "server"
   }
 }
 data "aws_ec2_instance_type_offerings" "t2" {
@@ -17,3 +15,4 @@ data "aws_ec2_instance_type_offerings" "t2" {
     values = ["t2.*"]
   }
 }
+
