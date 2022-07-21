@@ -8,8 +8,3 @@ resource "aws_instance" "app" {
     Name = "server"
   }
 }
-
-resource "aws_instance" "example123" {
-  ami = var.AMIS[var.AWS_REGION]
-  instance_type = var.instance
-}
