@@ -14,7 +14,7 @@ resource "aws_db_instance" "default" {
   identifier           =  "dev-db"     
   engine_version       = "13"
   instance_class       = "db.t3.medium"
-  name                 = "ntweeklydb001"
+  db_name                 = "ntweeklydb001"
   username             = "dbadmin1"
   password             = random_password.password.result
   skip_final_snapshot  = true
