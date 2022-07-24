@@ -6,11 +6,11 @@ provider "aws" {
   #  profile                    = "pocaws"
 }
 
-terraform {
-  required_providers {
-    postgresql = {
-      source  = "cyrilgdn/postgresql"
-      version = ">= 1.11.2"
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     postgresql = {
+#       source  = "cyrilgdn/postgresql"
+#       version = ">= 1.11.2"
+#     }
+#   }
+# }
