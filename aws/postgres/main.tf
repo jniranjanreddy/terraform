@@ -10,11 +10,13 @@
 
 resource "aws_db_instance" "default" {
   allocated_storage    = 20
-  engine               = "postgres"
+  #engine               = "postgres" # This oneis working ap-south-1
+  engine               = "mariadb"
   identifier           =  "dev-db"     
-  engine_version       = "13"
+  #engine_version       = "13"
+  engine_version       = "10.6.7"  # This one is working ap-south-1
   instance_class       = "db.t3.medium"
-  db_name                 = "ntweeklydb001"
+  db_name              = "ntweeklydb001"
   username             = "dbadmin1"
   password             = "ntweeklydb001"
   skip_final_snapshot  = true
