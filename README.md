@@ -1,5 +1,15 @@
 ## Important Commands:-
 
+Other IAC
+
+ARM Templates - For Azure
+Azure - Blue Prints
+Cloudformation - Only for AWS
+Cloud Support Manager - Google Cloud
+Terrafrom - Support many Cloud Service Providers.
+
+
+
 ## Format and Validate Terraform code
 ```
 terraform fmt                      # format code per HCL canonical standard
