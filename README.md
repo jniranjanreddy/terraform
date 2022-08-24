@@ -126,7 +126,7 @@ terraform apply -var="region=us-easet01"
 
 terraform apply -var-file="myproject.tfvars"
 
-export TF_VAR_region=us-esat01
+export TF_VAR_region=us-east-1
 ```
 
 
