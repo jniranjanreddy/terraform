@@ -1,11 +1,11 @@
 **/*.tfstate
+*.tfstate/*.tfstate/*.tfstate/*.tfstate
+/**/*.tfstate/**/**
 **/*.tfstate.*
 **/**/.terraform/
 **/**/*.tfvars/
 **/**/**/*.tfvars/
 **/**/**/**/*.tfvars/
 **/**/**/**/terraform.tfvars
-**/**/**/**/terraform.tfvars
-**/**/**/**/*.tfstate
 **/**/**/**/*.pub
 **/**/**/**/mykey
