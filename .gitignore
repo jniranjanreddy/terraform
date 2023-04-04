@@ -5,5 +5,7 @@
 **/**/**/*.tfvars/
 **/**/**/**/*.tfvars/
 **/**/**/**/terraform.tfvars
+**/**/**/**/terraform.tfvars
+**/**/**/**/*.tfstate
 **/**/**/**/*.pub
 **/**/**/**/mykey
