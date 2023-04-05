@@ -21,7 +21,7 @@ resource "azurerm_network_interface" "example" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = azurerm_public_ip.public_ip.id
+    public_ip_address_id          = azurerm_public_ip.public_ip.id
   }
 }
 
@@ -41,6 +41,8 @@ resource "azurerm_linux_virtual_machine" "example" {
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
+  #custom_data = "${file("customdata.txt")}"
+  custom_data = filebase64("userData.tpl")
 
   admin_ssh_key {
     username   = "adminuser"
