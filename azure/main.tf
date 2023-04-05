@@ -1,19 +1,3 @@
-# We strongly recommend using the required_providers block to set the
-# Azure Provider source and version being used
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=3.0.0"
-
-    }
-  }
-}
-# Configure the Microsoft Azure Provider
-provider "azurerm" {
-  features {}
-  skip_provider_registration = "true"
-}
 
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
@@ -37,7 +21,15 @@ resource "azurerm_network_interface" "example" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id = azurerm_public_ip.public_ip.id
   }
+}
+
+resource "azurerm_public_ip" "public_ip" {
+  name                = "vm_public_ip"
+  resource_group_name = var.RGName
+  location            = var.RGLocation
+  allocation_method   = "Dynamic"
 }
 
 resource "azurerm_linux_virtual_machine" "example" {
