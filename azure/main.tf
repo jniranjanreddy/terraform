@@ -41,8 +41,8 @@ resource "azurerm_linux_virtual_machine" "example" {
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
-  #custom_data = "${file("customdata.txt")}"
-  custom_data = filebase64("userData.tpl")
+  #custom_data = "${file("customdata.txt")}" # Not tested this one.
+  custom_data = filebase64("userData.tpl") # This worked fine.
 
   admin_ssh_key {
     username   = "adminuser"
