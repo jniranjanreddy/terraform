@@ -5,11 +5,10 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=3.0.0"
-      
+
     }
   }
 }
-
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
@@ -19,21 +18,20 @@ provider "azurerm" {
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
   address_space       = ["10.0.0.0/16"]
-  location            = "West US"
-  resource_group_name = "1-3581fe60-playground-sandbox"
+  location            = var.RGLocation
+  resource_group_name = var.RGName
 }
-
 resource "azurerm_subnet" "example" {
   name                 = "internal"
-  resource_group_name  = "1-3581fe60-playground-sandbox"
+  resource_group_name  = var.RGName
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "example" {
   name                = "example-nic"
-  location            = "West US"
-  resource_group_name = "1-3581fe60-playground-sandbox"
+  location            = var.RGLocation
+  resource_group_name = var.RGName
 
   ip_configuration {
     name                          = "internal"
@@ -44,8 +42,8 @@ resource "azurerm_network_interface" "example" {
 
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
-  resource_group_name = "1-3581fe60-playground-sandbox"
-  location            = "West US"
+  location            = var.RGLocation
+  resource_group_name = var.RGName
   size                = "Standard_F2"
   admin_username      = "adminuser"
   network_interface_ids = [
