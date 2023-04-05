@@ -4,15 +4,15 @@ variable "instance" {
   #type = string
 }
 variable "AWS_REGION" {
-  default = "ap-south-1"
-  #default = "us-east-1"
+  #default = "ap-south-1"
+  default = "us-east-1"
 }
 
 variable "AMIS" {
   type = map(string)
   default = {
-    ap-south-1 = "ami-0e2578ce2172ae027"
-    #us-east-1 = "ami-13be557e"
+    #ap-south-1 = "ami-0e2578ce2172ae027"
+    us-east-1 = "ami-13be557e"
     
   }
 }
