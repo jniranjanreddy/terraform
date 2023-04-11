@@ -3,19 +3,19 @@ variable "instance" {
   default     = "t2.micro"
   #type = string
 }
-variable "AWS_REGION" {
-  #default = "ap-south-1"
-  default = "ap-south-1"
-}
+# variable "AWS_REGION" {
+#   default = "ap-south-1"
+#   #default = "us-east-1"
+# }
 
 variable "AMIS" {
   type = map(string)
   default = {
     ap-south-1 = "ami-04bde106886a53080"
     us-east-1 = "ami-13be557e"
-    
   }
 }
+
 variable "KEYS" {
   type = map(string)
   default = {

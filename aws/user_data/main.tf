@@ -8,3 +8,6 @@ resource "aws_instance" "app" {
     Name = "server"
   }
 }
+# data "aws_regions" "current" {
+#   all_regions = true
+# }

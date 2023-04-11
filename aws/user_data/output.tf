@@ -17,3 +17,4 @@ output "Seq-Groups" {
 output "Tags" {
   value = aws_instance.app.tags.Name
 }
+
