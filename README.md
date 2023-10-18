@@ -249,5 +249,8 @@ export AWS_REGION=<mention the region>
 /usr/local/bin/terraforming rt --tfstate > rt.tfstate
 
 
+Debug or logs
+export TF_LOG="DEBUG" or export TF_LOG="TRACE"
+terraform plan -no-color 2>&1 | tee plan.log
 
 ```
